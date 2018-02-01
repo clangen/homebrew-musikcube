@@ -15,6 +15,7 @@ class Musikcube < Formula
     depends_on 'faad2'
     depends_on 'libmicrohttpd'
     depends_on 'lame'
+    depends_on 'libev'
 
     def install
         system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{prefix} ."
