@@ -5,7 +5,7 @@ class Musikcube < Formula
     head 'git://github.com/clangen/musikcube.git'
     url 'https://github.com/clangen/musikcube/archive/0.40.0-1.tar.gz'
     sha256 '122d65601be06f768dcea6cd8d089445a180f4e3681bfc9c98a67d70babc2ebe'
-    version '0.40.0'
+    version '0.40.0-1'
 
     depends_on 'cmake' => :build
     depends_on 'boost'
