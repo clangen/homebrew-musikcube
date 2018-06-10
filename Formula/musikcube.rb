@@ -3,9 +3,9 @@ require 'formula'
 class Musikcube < Formula
     homepage 'http://musikcube.com'
     head 'git://github.com/clangen/musikcube.git'
-    url 'https://github.com/clangen/musikcube/archive/0.42.0.tar.gz'
-    sha256 'da23cf524160f874c07fe0dbaf52447abb910ab7aba57aa0599ded7519371d0c'
-    version '0.42.0'
+    url 'https://github.com/clangen/musikcube/archive/0.50.0.tar.gz'
+    sha256 'ffb580937c8914f13e7ea804a05d6d024639109d981220a97ffa57d9396b2336'
+    version '0.50.0'
 
     depends_on 'cmake' => :build
     depends_on 'boost'
