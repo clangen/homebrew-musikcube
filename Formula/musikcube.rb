@@ -16,6 +16,7 @@ class Musikcube < Formula
     depends_on 'libmicrohttpd'
     depends_on 'lame'
     depends_on 'libev'
+    depends_on 'openssl'
 
     def install
         system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{prefix} ."
