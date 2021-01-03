@@ -20,6 +20,7 @@ class Musikcube < Formula
     depends_on 'taglib'
     depends_on 'curl'
     depends_on 'libopenmpt'
+    depends_on 'ncurses''
 
     def install
         system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{prefix} ."
