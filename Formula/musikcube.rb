@@ -4,7 +4,7 @@ class Musikcube < Formula
     homepage 'http://musikcube.com'
     head 'git://github.com/clangen/musikcube.git'
     url 'https://github.com/clangen/musikcube/archive/0.96.10.tar.gz'
-    sha256 '4a5ad90dfb2e28e2391e365cd31b56308c9dcbd45ee1bd655277b2a117572d42'
+    sha256 '91fd984e68b6ef66f1be1ecdf0c84607453ec6ec80632ece688ac745c7719ea5'
     version '0.96.10'
 
     depends_on 'cmake' => :build
@@ -23,7 +23,7 @@ class Musikcube < Formula
     depends_on 'ncurses'
 
     def install
-        system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{HOMEBREW_PREFIX} ."
+        system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DRPATH_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{prefix} ."
         system "make"
         system "cmake ."
         system "make install"
