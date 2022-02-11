@@ -6,7 +6,7 @@ class Musikcube < Formula
     homepage 'http://musikcube.com'
     head 'git://github.com/clangen/musikcube.git'
     url "https://github.com/clangen/musikcube/archive/#{$VERSION}.tar.gz"
-    sha256 '91fd984e68b6ef66f1be1ecdf0c84607453ec6ec80632ece688ac745c7719ea5'
+    sha256 '9394f1fa9df25c30a443ce92ff48986c883b715d361efb31bbc1d0161d2fc7d9'
     version "#{$VERSION}"
 
     depends_on 'cmake' => :build
