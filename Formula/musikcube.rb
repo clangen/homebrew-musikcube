@@ -1,6 +1,6 @@
 require 'formula'
 
-$VERSION = '0.96.10'
+$VERSION = '0.96.11'
 
 class Musikcube < Formula
     homepage 'http://musikcube.com'
