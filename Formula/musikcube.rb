@@ -29,7 +29,7 @@ class Musikcube < Formula
         system "make"
         system "cmake ."
         system "make install"
-        system "install_name_tool -add_rpath \"@executable_path/\" #{HOMEBREW_PREFIX}/Cellar/musikcube/#{$VERSION}/share/musikcube/musikcube 2> /dev/null"
-        system "install_name_tool -add_rpath \"@executable_path/\" #{HOMEBREW_PREFIX}/Cellar/musikcube/#{$VERSION}/share/musikcube/musikcubed 2> /dev/null"
+        system "install_name_tool -add_rpath \"@executable_path/\" #{HOMEBREW_PREFIX}/Cellar/musikcube/#{$VERSION}/share/musikcube/musikcube || true"
+        system "install_name_tool -add_rpath \"@executable_path/\" #{HOMEBREW_PREFIX}/Cellar/musikcube/#{$VERSION}/share/musikcube/musikcubed || true"
     end
 end
