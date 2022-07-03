@@ -1,12 +1,12 @@
 require 'formula'
 
-$VERSION = '0.97.0'
+$VERSION = '0.98.0'
 
 class Musikcube < Formula
     homepage 'http://musikcube.com'
     head 'git://github.com/clangen/musikcube.git'
     url "https://github.com/clangen/musikcube/archive/#{$VERSION}.tar.gz"
-    sha256 'ab170c5100251fcd6c8fd3c32eea45e9854c6c6272c6b0970bffbfc55d0b2ec5'
+    sha256 'a4ae9d6d0fa5ce99de2e7bbc1de75cc8638704a2284b38a51178e23bbe55499c'
     version "#{$VERSION}"
 
     depends_on 'cmake' => :build
