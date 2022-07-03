@@ -10,6 +10,7 @@ class Musikcube < Formula
     version "#{$VERSION}"
 
     depends_on 'cmake' => :build
+    depends_on 'ccache' => :build
     depends_on 'boost'
     depends_on 'libogg'
     depends_on 'libvorbis'
