@@ -11,6 +11,7 @@ class Musikcube < Formula
 
     depends_on 'cmake' => :build
     depends_on 'ccache' => :build
+    depends_on 'git' => :build
     depends_on 'libogg'
     depends_on 'libvorbis'
     depends_on 'ffmpeg'
@@ -25,6 +26,7 @@ class Musikcube < Formula
     depends_on 'ncurses'
 
     def install
+        system "git clone --branch asio-1-24-0 https://github.com/chriskohlhoff/asio/ src/3rdparty/asio/"
         system "cmake -DCMAKE_BUILD_TYPE=Release -DHOMEBREW_PREFIX=#{HOMEBREW_PREFIX} -DCMAKE_INSTALL_PREFIX=#{prefix} ."
         system "make"
         system "cmake ."
