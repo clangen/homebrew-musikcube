@@ -5,6 +5,7 @@ class Musikcube < Formula
   homepage "http://musikcube.com"
   url "https://github.com/clangen/musikcube/archive/0.99.1.tar.gz"
   sha256 "c02c2a7c255929a8d315fe5d586413db2555be4d7fa482336c193011a197cce1"
+  license "BSD-3-Clause"
   head "git://github.com/clangen/musikcube.git"
 
   depends_on "ccache" => :build
