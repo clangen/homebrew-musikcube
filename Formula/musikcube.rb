@@ -6,10 +6,11 @@ class Musikcube < Formula
   url "https://github.com/clangen/musikcube/archive/0.99.1.tar.gz"
   sha256 "c02c2a7c255929a8d315fe5d586413db2555be4d7fa482336c193011a197cce1"
   license "BSD-3-Clause"
-  head "https://github.com/clangen/musikcube.git"
+  head "https://github.com/clangen/musikcube.git", branch: "master"
 
   depends_on "ccache" => :build
   depends_on "cmake" => :build
+  depends_on "curl"
   depends_on "ffmpeg"
   depends_on "game-music-emu"
   depends_on "gnutls"
@@ -19,10 +20,9 @@ class Musikcube < Formula
   depends_on "libogg"
   depends_on "libopenmpt"
   depends_on "libvorbis"
+  depends_on "ncurses"
   depends_on "openssl@1.1"
   depends_on "taglib"
-  uses_from_macos "curl"
-  uses_from_macos "ncurses"
 
   def install
     @job_count = [Hardware::CPU.cores - 2, 1].max
@@ -43,6 +43,7 @@ class Musikcube < Formula
   end
 
   test do
-    system "musikcubed", "--version"
+    system "musikcubed", "--start"
+    system "musikcubed", "--stop"
   end
 end
