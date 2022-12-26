@@ -22,7 +22,7 @@ class Musikcube < Formula
   depends_on "libopenmpt"
   depends_on "libvorbis"
   depends_on "ncurses"
-  depends_on "openssl@3"
+  depends_on "openssl@1.1"
   depends_on "taglib"
   depends_on "taglib"
 
