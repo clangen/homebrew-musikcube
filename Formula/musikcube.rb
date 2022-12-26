@@ -13,16 +13,16 @@ class Musikcube < Formula
   depends_on "git" => :build
   depends_on "curl"
   depends_on "ffmpeg"
+  depends_on "game-music-emu"
   depends_on "gnutls"
   depends_on "lame"
   depends_on "libev"
-  depends_on "libgme"
   depends_on "libmicrohttpd"
   depends_on "libogg"
   depends_on "libopenmpt"
   depends_on "libvorbis"
   depends_on "ncurses"
-  depends_on "openssl"
+  depends_on "openssl@3"
   depends_on "taglib"
   depends_on "taglib"
 
