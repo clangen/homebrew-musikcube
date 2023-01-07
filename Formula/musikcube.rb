@@ -24,17 +24,19 @@ class Musikcube < Formula
   depends_on "taglib"
 
   def install
-    args = std_cmake_args + %w[
-      -DCMAKE_BUILD_TYPE=Release
-    ]
-    system "cmake", ".", *args
+    system "cmake", ".", *std_cmake_args
     system "make"
+    # running `cmake .` again updates cached cmake variables to include resources
+    # generated during the `make` phase; this ensures things like dynamic plugins,
+    # locales, and themes are included in the install manifest.
     system "cmake", "."
     system "make", "install"
   end
 
   test do
     system "musikcubed", "--start"
+    # if there is no lockfile then the daemon was unable to start properly
+    system "head", "/tmp/musikcubed.lock"
     system "musikcubed", "--stop"
   end
 end
