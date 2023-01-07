@@ -36,7 +36,7 @@ class Musikcube < Formula
   test do
     system "musikcubed", "--start"
     # if there is no lockfile then the daemon was unable to start properly
-    system "head", "/tmp/musikcubed.lock"
+    assert_file_exists "/tmp/musikcubed.lock"
     system "musikcubed", "--stop"
   end
 end
