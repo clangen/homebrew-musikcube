@@ -6,7 +6,6 @@ class Musikcube < Formula
   license "BSD-3-Clause"
   head "https://github.com/clangen/musikcube.git", branch: "master"
 
-  depends_on "ccache" => :build
   depends_on "cmake" => :build
   depends_on "asio"
   depends_on "curl"
