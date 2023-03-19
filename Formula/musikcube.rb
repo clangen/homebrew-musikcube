@@ -6,8 +6,8 @@ class Musikcube < Formula
   license "BSD-3-Clause"
   head "https://github.com/clangen/musikcube.git", branch: "master"
 
+  depends_on "asio" => :build
   depends_on "cmake" => :build
-  depends_on "asio"
   depends_on "curl"
   depends_on "ffmpeg"
   depends_on "game-music-emu"
@@ -33,9 +33,9 @@ class Musikcube < Formula
   end
 
   test do
-    system "musikcubed", "--start"
+    system "#{bin}/musikcubed", "--start"
     # if there is no lockfile then the daemon was unable to start properly
     assert_file_exists "/tmp/musikcubed.lock"
-    system "musikcubed", "--stop"
+    system "#{bin}/musikcubed", "--stop"
   end
 end
